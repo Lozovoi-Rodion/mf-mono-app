@@ -5,7 +5,6 @@ import App from "./App";
 
 // Mount function to start up the app
 const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
-  // check it. probaly nesting is enough https://v5.reactrouter.com/web/example/nesting
   const history =
     defaultHistory ||
     createMemoryHistory({
@@ -16,7 +15,7 @@ const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
     history.listen(onNavigate);
   }
 
-  ReactDOM.render(<App history={history} onSignIn={onSignIn} />, el);
+  ReactDOM.render(<App onSignIn={onSignIn} history={history} />, el);
 
   return {
     onParentNavigate({ pathname: nextPathname }) {

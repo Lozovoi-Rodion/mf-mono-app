@@ -1,17 +1,18 @@
 import React from "react";
 import { Switch, Route, Router } from "react-router-dom";
-import { StylesProvider, createGenerateClassName } from "@material-ui/core";
+import {
+  StylesProvider,
+  createGenerateClassName,
+} from "@material-ui/core/styles";
 
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
-import { useState } from "react";
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "au",
 });
 
 export default ({ history, onSignIn }) => {
-
   return (
     <div>
       <StylesProvider generateClassName={generateClassName}>

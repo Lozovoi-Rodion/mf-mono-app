@@ -4,12 +4,14 @@ import { StylesProvider, createGenerateClassName } from "@material-ui/core";
 
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import { useState } from "react";
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "au",
 });
 
 export default ({ history, onSignIn }) => {
+
   return (
     <div>
       <StylesProvider generateClassName={generateClassName}>
